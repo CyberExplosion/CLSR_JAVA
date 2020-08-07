@@ -6,6 +6,7 @@
 # Custome Folders
 lib/
 src/
+*/.md
 
 # User-specific files
 *.rsuser
