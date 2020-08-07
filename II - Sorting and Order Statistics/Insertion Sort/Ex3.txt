@@ -1,0 +1,22 @@
+-  Loop invariant: At the begining of each loop. The sub-array
+        of range [1 - (i -1)] consist of elements that are not "v"
+
+- Initialization: Before the loop starts, the sub-array is empty (since)
+    there's no loop yet. Thus it's always true
+
+- Maintenance: During each loop, we compare A[i] with v.
+    If they are the same, we return i, which is the correct
+    result. Otherwise, we move to the next iteration.
+    At the end of each loop, we know that the sub-array
+    A[1...i] does not contains "v", so the Loop invariant holds
+    true. Increment i for the next iteration of the for loop
+    will then preserve the loop invariant.
+
+- Termination: The loop terminate when i > A.length = n.
+    Since i increse by 1, we must have an i = n + 1 when
+    loop terminates. Substituing n + 1 for "i" in the 
+    wording of loop invariant. We have the subarray A[1...n]
+    consists of elements that are different than "v". Thus,
+    we return NIL. Observing that A[1..n], we conclude
+    that the entire array does not have element equal to "v"
+    . Hence the algorith is correct.
