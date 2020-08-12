@@ -1,0 +1,30 @@
+*Iteratively:
+Iterativel-Binary-Search(A, v, low, high)
+    while(low <= high)
+        mid = floor((low + high) / 2)
+        if(v == mid)
+            return mid
+        else if v > A[mid]
+            low = mid + 1
+        else
+            high = mid - 1
+    return NIL
+
+*Recursively
+Recursive-Binary-Search(A, v, low, high)
+    if(low > high)
+        return NIL
+    mid = floor((low + high) / 2)
+    if(v == A[mid])
+        return mid
+    if(v > A[mid])
+        Recursive-Binary-Search(A, v, mid + 1, high)
+    else
+        Recursive-Binary-Search(A, v, low, mid - 1)
+
+Each time we do comparision, the search range is halved.
+The recurence then:
+        {   O(1) = 1    if n = 1    //Either found or return NIL
+T(n) = {
+        {   T(n/2) + O(1)   if n > 1    //There's only 1 step for divide and combine
+Therefore, the worstCase is T(n) = O(lg n)

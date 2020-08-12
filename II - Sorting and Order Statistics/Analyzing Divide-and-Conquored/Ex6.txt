@@ -1,0 +1,8 @@
+The loop 5 - 7 while loop does 2 thing
+    1) Look for the correct position to insert the value
+    2) Shift all biggers value to the right to insert the new value in
+Even though we can use Binary Search to reduce the 1st step
+into O(lg n). The "shifting" requires on 2nd step still requires
+O(n) shift worst case.
+Thus, combines with the loop outside, insertion sort still:
+    O(n^2)

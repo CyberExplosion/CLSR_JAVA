@@ -1,0 +1,12 @@
+First sort the A[1..n], this takes O(n lg n)
+Then let i = 0  //Index of first elem
+j = n - 1   //Index of last elem
+
+while i <= j    //Binary search
+    if(A[i] + A[j] == val)
+        return true
+    if(A[i] + A[j] > val)
+        j = j - 1
+    else
+        i = i + 1
+return false

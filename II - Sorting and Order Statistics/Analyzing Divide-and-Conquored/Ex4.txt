@@ -1,0 +1,8 @@
+we have 
+with n = 1 --> T(n) = O(n)
+with n > 1 --> T(n) = T(n - 1) +   O(n)
+                        ^             ^
+                        |             |
+                    Reduce step     Combine step 
+This because it takes O(n) as the worst case to insert a value back into the sorted array A[1..n - 1]
+So worst case is O(n^2)
